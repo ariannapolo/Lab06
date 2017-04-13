@@ -4,6 +4,7 @@ public class SimpleCity {
 
 	private String nome;
 	private int costo;
+	private int id;
 	
 	public SimpleCity(String nome) {
 		this.nome = nome;
@@ -20,6 +21,9 @@ public class SimpleCity {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public void setId(int id){
+		this.id=id;
 	}
 	
 	public int getCosto() {
@@ -50,7 +54,7 @@ public class SimpleCity {
 		if (nome == null) {
 			if (other.nome != null)
 				return false;
-		} else if (!nome.equals(other.nome))
+		} else if (!nome.equals(other.nome)|| this.id!=other.id)
 			return false;
 		return true;
 	}
